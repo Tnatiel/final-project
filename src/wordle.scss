@@ -37,24 +37,25 @@ body {
     display: flex;
     justify-content: center;
     background:linear-gradient(to bottom, rgba(71, 136, 141, 0.8588235294) 5%, rgb(91 142 150) 100%);
+    height: 100vh;
+    overflow: hidden;
 
 }
     
 
 main {
     align-items: center;
-    background: linear-gradient(to bottom, rgb(121 165 168) 0%, rgb(60 126 149) 65%);
     display: flex;
     flex-direction: column;
-    width: 90%;
-    height: 110vh;
-    gap: 3vh;
+    gap: 5vh;
+    margin-top: 2rem;
+    top: 2rem;
     
     #main-header {
-        font-family: 'Nerko One', cursive;
-        font-size: 2.3rem;
-        font-weight: 100;
-        color: rgb(247, 142, 142);
+        font-family: 'Josefin Slab', serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: rgb(108, 41, 41);
     }
 
 }
@@ -72,8 +73,8 @@ main {
         height: 7vh;
         border-radius: 20%;
         text-align: center;
-        font-family: 'Nerko One', cursive;
-        font-size: 2rem;
+        font-family: 'Josefin Slab', serif;
+        font-size: 1.5rem;
         font-weight: 600;
         caret-color: transparent;
         border: solid rgba(0, 0, 0, 0.595);
@@ -104,7 +105,7 @@ main {
         display:inline-block;
         cursor:pointer;
         color:#342727f7;
-        font-family: 'Nerko One', cursive;
+        font-family: 'Josefin Slab', serif;
         font-size:1.77rem;
         font-weight:bold;
         height: 4vw;
@@ -131,5 +132,10 @@ main {
         display: flex;
         justify-content: center;
         column-gap: 0.2rem;
+    }
+
+    // SUBMIT HIDE
+     div.kboard-row3 #sub {
+        display: none ;
     }
 }

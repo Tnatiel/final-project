@@ -7,9 +7,9 @@
     <title>Wordle</title>
     <link rel="stylesheet" href="wordle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&family=Nerko+One&display=swap" rel="stylesheet">
+    <script src="/src/wordle.js"></script>
 </head>
 <body>
     <main>
@@ -21,11 +21,11 @@
         <div class="user-inputs">
             <!-- ROW 1 -->
             <div class="r1">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
+                <input type="text" class="ur-input" maxlength="1" autofocus>
+                <input type="text" class="ur-input" maxlength="1">
+                <input type="text" class="ur-input" maxlength="1">
+                <input type="text" class="ur-input" maxlength="1">
+                <input type="text" class="ur-input" maxlength="1">
             </div>
             <!-- ROW 2 -->
             <div class="r2">
@@ -97,7 +97,7 @@
             </div>
             <!-- ROW3 -->
             <div class="kboard-row3">
-                <button id="enter" class="kbd-btn">Enter</button>
+                <button id="enter" class="kbd-btn"><input type="submit" id="sub">Enter</button>
                 <button id="Z" class="kbd-btn">Z</button>
                 <button id="X" class="kbd-btn">X</button>
                 <button id="C" class="kbd-btn">C</button>
