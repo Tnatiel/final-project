@@ -1,0 +1,25 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "Wordle game",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/wordle.scss src/wordle.css",
+    "dev-server": "live-server src",
+    "dev-sass": "sass src/wordle.scss src/wordle.css --watch",
+    "dev": "npm run dev-server & npm run dev-sass",
+    "start": "echo \"No start script\" && exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tnatiel/final-project.git"
+  },
+  
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}
