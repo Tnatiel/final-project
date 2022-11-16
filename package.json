@@ -11,15 +11,14 @@
     "start": "echo \"No start script\" && exit 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tnatiel/final-project.git"
   },
-  
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "sass": "^1.56.1"
   }
 }
