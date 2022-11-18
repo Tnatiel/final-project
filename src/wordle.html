@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle</title>
-    <link rel="stylesheet" href="wordle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
     <script src="/src/wordle.js"></script>
 </head>
 <body>
@@ -18,54 +18,54 @@
             <h1>Wordle</h1>
         </headr>
         <!-- USER INPUTS -->
-        <div class="user-inputs">
+        <div class="user-input-sec">
             <!-- ROW 1 -->
             <div class="r1">
-                <input id="1" type="text" class="ur-input" maxlength="1" autofocus>
-                <input id="2" type="text" class="ur-input" maxlength="1">
-                <input id="3" type="text" class="ur-input" maxlength="1">
-                <input id="4" type="text" class="ur-input" maxlength="1">
-                <input id="5" type="text" class="ur-input" maxlength="1">
+                <div id="1" class="ur-input"></div>
+                <div id="2" class="ur-input"></div>
+                <div id="3" class="ur-input"></div>
+                <div id="4" class="ur-input"></div>
+                <div id="5" class="ur-input"></div>              
             </div>
             <!-- ROW 2 -->
             <div class="r2">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
+                <div id="1" class="ur-input"></div>
+                <div id="2" class="ur-input"></div>
+                <div id="3" class="ur-input"></div>
+                <div id="4" class="ur-input"></div>
+                <div id="5" class="ur-input"></div>
             </div>
             <!-- ROW 3 -->
             <div class="r3">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
+                <div id="1" class="ur-input"></div>
+                <div id="2" class="ur-input"></div>
+                <div id="3" class="ur-input"></div>
+                <div id="4" class="ur-input"></div>
+                <div id="5" class="ur-input"></div>
             </div>
             <!-- ROW 4 -->
             <div class="r4">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
+                <div id="1" class="ur-input"></div>
+                <div id="2" class="ur-input"></div>
+                <div id="3" class="ur-input"></div>
+                <div id="4" class="ur-input"></div>
+                <div id="5" class="ur-input"></div>
             </div>
             <!-- ROW 5 -->
             <div class="r5">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
+                <div id="1" class="ur-input"></div>
+                <div id="2" class="ur-input"></div>
+                <div id="3" class="ur-input"></div>
+                <div id="4" class="ur-input"></div>
+                <div id="5" class="ur-input"></div>
             </div>
             <!-- ROW 6 -->
             <div class="r6">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
-                <input type="text" class="ur-input" maxlength="1" pattern="[A-Z],{1}">
+                <div id="1" class="ur-input"></div>
+                <div id="2" class="ur-input"></div>
+                <div id="3" class="ur-input"></div>
+                <div id="4" class="ur-input"></div>
+                <div id="5" class="ur-input"></div>
             </div>
         </div>
         <!-- KEYBOARD -->
@@ -97,7 +97,7 @@
             </div>
             <!-- ROW3 -->
             <div class="kboard-row3">
-                <button id="enter" class="kbd-btn"><input type="submit" id="sub">Enter</button>
+                <button id="enter" class="kbd-btn">Enter</button>
                 <button id="Z" class="kbd-btn">Z</button>
                 <button id="X" class="kbd-btn">X</button>
                 <button id="C" class="kbd-btn">C</button>

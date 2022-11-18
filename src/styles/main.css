@@ -4,6 +4,13 @@
   border: 0;
 }
 
+#main-header {
+  font-family: "Josefin Slab", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(108, 41, 41);
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -16,36 +23,25 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 8vh;
+  gap: 5vh;
   margin-top: 2rem;
   top: 2rem;
 }
-main #main-header {
-  font-family: "Josefin Slab", serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: rgb(108, 41, 41);
-}
 
-.user-inputs {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5vh;
+.user-input-sec {
+  display: grid;
+  gap: 0.1rem;
 }
-.user-inputs input {
-  width: 2rem;
-  height: 3rem;
+.user-input-sec .ur-input {
+  width: 4vw;
+  height: 8vh;
+  background-color: white;
+  border: solid rgb(103, 103, 103);
   border-radius: 20%;
-  text-align: center;
-  font-family: "Josefin Slab", serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  caret-color: transparent;
-  border: solid rgba(0, 0, 0, 0.595);
 }
-.user-inputs .r1, .user-inputs .r2, .user-inputs .r3, .user-inputs .r4, .user-inputs .r5, .user-inputs .r6 {
-  display: flex;
-  column-gap: 0.2vw;
+.user-input-sec .r1, .user-input-sec .r2, .user-input-sec .r3, .user-input-sec .r4, .user-input-sec .r5, .user-input-sec .r6 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .keyboard {
@@ -63,10 +59,10 @@ main #main-header {
   cursor: pointer;
   color: rgba(52, 39, 39, 0.968627451);
   font-family: "Josefin Slab", serif;
-  font-size: 1.77rem;
+  font-size: 2vw;
   font-weight: bold;
-  height: 4vw;
-  width: 4vw;
+  height: 2rem;
+  width: 5vw;
   text-decoration: none;
 }
 .keyboard .kbd-btn:hover {
@@ -75,7 +71,7 @@ main #main-header {
 }
 .keyboard .kbd-btn:active {
   position: relative;
-  top: 1px;
+  top: 0.16rem;
 }
 .keyboard #enter, .keyboard #del {
   width: 6.5vw;
@@ -85,8 +81,5 @@ main #main-header {
   justify-content: center;
   column-gap: 0.2rem;
 }
-.keyboard div.kboard-row3 #sub {
-  display: none;
-}
 
-/*# sourceMappingURL=wordle.css.map */
+/*# sourceMappingURL=main.css.map */

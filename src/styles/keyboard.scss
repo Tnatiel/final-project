@@ -1,0 +1,53 @@
+// ******************************MINIXS**************************
+
+@mixin btn-def {
+    background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+        background-color:#ffffff;
+        border-radius:1rem;
+        border:0.1rem solid #dcdcdc;
+        display:inline-block;
+        cursor:pointer;
+        color:#342727f7;
+        font-family: 'Josefin Slab', serif;
+        font-size: 2vw;
+        font-weight: bold;
+        height: 2rem;
+        width: 5vw;
+        text-decoration:none;
+    
+    
+    &:hover {
+        background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+        background-color:#f6f6f6;}
+
+    &:active {
+        position:relative;
+        top: 0.16rem;
+    }
+}
+
+@mixin keyboard-def {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5vh;
+        gap: 0.5vh;
+    
+        // BUTTONS
+        .kbd-btn {
+            @include btn-def()
+        }
+        
+        // ENTER & DEL
+        #enter, #del {
+            width: 6.5vw;
+        }
+        //  ROWS
+        .kboard-row1, .kboard-row2, .kboard-row3 {
+            display: flex;
+            justify-content: center;
+            column-gap: 0.2rem;
+        }
+    }
+
+
+

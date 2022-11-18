@@ -1,0 +1,26 @@
+// ******************************MINIXS**************************
+@mixin ur-input-def {
+    width: 4vw;
+    height: 8vh;
+    background-color: white;
+    border: solid rgb(103,103,103);
+    border-radius: 20%;
+}
+
+@mixin rows-def {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@mixin input-sec-def {
+    display: grid;
+    gap: 0.1rem;
+    
+    .ur-input {
+        @include ur-input-def()
+    }
+
+    .r1, .r2 ,.r3, .r4, .r5, .r6 {
+        @include rows-def()
+    }
+}
