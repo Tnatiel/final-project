@@ -1,28 +1,30 @@
+
+
 // ******************************MINIXS**************************
 
 @mixin btn-def {
-    background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-        background-color:#ffffff;
-        border-radius:1rem;
-        border:0.1rem solid #dcdcdc;
-        display:inline-block;
-        cursor:pointer;
-        color:#342727f7;
-        font-family: 'Josefin Slab', serif;
-        font-size: 2vw;
-        font-weight: bold;
-        height: 2rem;
-        width: 5vw;
-        text-decoration:none;
+    
+    background-color: $btn-color;
+    border-radius: 15%;
+    border:0.1rem solid #dcdcdc;
+    display:inline-block;
+    cursor:pointer;
+    color: $font-color;
+    font-family: 'Josefin Slab', serif;
+    font-size: 2vw;
+    font-weight: bold;
+    height: 3.2rem;
+    width: 4.5vw;
+    text-decoration:none;
     
     
     &:hover {
-        background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-        background-color:#f6f6f6;}
+        background:linear-gradient(to bottom, #2e3e5b 5%, #2e3e5b 100%);
+        background-color:#2e3e5b;}
 
     &:active {
         position:relative;
-        top: 0.16rem;
+        top: 0.05rem;
     }
 }
 

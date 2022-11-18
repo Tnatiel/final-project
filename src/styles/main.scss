@@ -3,6 +3,11 @@
 @import 'keyboard';
 @import 'user_input';
 
+// ******************************VARIABLES**************************
+$main-color: #0d1b2a;
+$font-color: #e0e1dd;
+$btn-color: #1b263b;
+
 * {
     margin: 0;
     padding: 0;
@@ -16,10 +21,9 @@
 body {
     display: flex;
     justify-content: center;
-    background:linear-gradient(to bottom, rgba(71, 136, 141, 0.8588235294) 5%, rgb(91 142 150) 100%);
     height: 100vh;
     overflow: hidden;
-
+    background-color: $main-color;
 }
     
 
@@ -28,8 +32,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    margin-top: 2rem;
-    top: 2rem;
+    margin-top: 2vh;
 }
 
 .user-input-sec {

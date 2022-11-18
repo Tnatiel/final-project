@@ -2,19 +2,20 @@
 @mixin ur-input-def {
     width: 4vw;
     height: 8vh;
-    background-color: white;
     border: solid rgb(103,103,103);
-    border-radius: 20%;
+    
 }
 
 @mixin rows-def {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    column-gap: 0.1vw;
+
 }
 
 @mixin input-sec-def {
     display: grid;
-    gap: 0.1rem;
+    gap: 0.1vh;
     
     .ur-input {
         @include ur-input-def()
