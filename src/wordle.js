@@ -11,7 +11,7 @@ abc ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 // Focus on first cell on page load
 document.addEventListener('DOMcontentloaded', foucsCell(input1))
 
-
+//  Focus funcs
 function foucsCell() {
     if (row > 5) {
         alert('done')
@@ -24,25 +24,29 @@ function unFocusCell() {
     document.getElementById(`${row}-${col}`).style.border = 'solid #2e3e5b'
 }
 
+
+// Handle clicks and keypress
 const handleClick = (key) => {
     addLetter(key);
 }
 
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', () => handleClick(buttons[i].id))
+}
 const handleKey = (key) => {
-    addLetter(key)
+    kbdAdd(key)
 }
 
 function addLetter(letter){
     const curCell = document.getElementById(`${row}-${col}`);
     if (abc.includes(letter)) {
         curGuess += letter;
-        console.log(curGuess)
         curCell.textContent = letter;
         unFocusCell();
         col++;
         nextCell();
 
-    } else if (letter == 'Backspace' || letter == 'del') {
+    } else if (letter == 'del') {
         if (col > 0) {
             unFocusCell();
             curGuess = curGuess.substring(0, curGuess.length - 1);
@@ -52,7 +56,36 @@ function addLetter(letter){
         }
     } 
 }
+document.addEventListener('keyup', (e) =>{
+    kbdAdd(e)
+})
 
+// document.onkeyup = function (e) {
+//     // console.log('key down');
+//     console.log(e);
+//     kbdAdd(e)
+//   };
+
+function kbdAdd(letter){
+    const curCell = document.getElementById(`${row}-${col}`);
+    // alert(letter.code)
+    if ('KeyA' <= letter.code && letter.code <= 'KeyZ') {
+        curCell.textContent = letter.code[3]
+        curGuess += letter;
+        unFocusCell();
+        col++;
+        nextCell();
+        // alert(letter.code)
+    } else if (letter.code == 'Backspace') {
+        if (col > 0) {
+            unFocusCell();
+            curGuess = curGuess.substring(0, curGuess.length - 1);
+            col--;
+            document.getElementById(`${row}-${col}`).textContent = '';
+            nextCell();
+        }  
+    }
+}
 function nextCell() {
     if (row > 5) {
         alert('done');
@@ -65,10 +98,5 @@ function nextCell() {
         foucsCell();
     }
 }
-
-
     
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', () => handleClick(buttons[i].id))
-}
     
