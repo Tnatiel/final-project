@@ -32,9 +32,16 @@ main {
   gap: 0.1vh;
 }
 .user-input-sec .ur-input {
-  width: 4vw;
+  width: 3rem;
   height: 8vh;
-  border: solid rgb(103, 103, 103);
+  border: solid #2e3e5b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.user-input-sec .ur-input:focus-within {
+  outline: solid rgb(176, 199, 223);
 }
 .user-input-sec .r1, .user-input-sec .r2, .user-input-sec .r3, .user-input-sec .r4, .user-input-sec .r5, .user-input-sec .r6 {
   display: grid;
@@ -59,7 +66,7 @@ main {
   font-size: 2vw;
   font-weight: bold;
   height: 3.2rem;
-  width: 4.5vw;
+  width: 2.5rem;
   text-decoration: none;
 }
 .keyboard .kbd-btn:hover {
@@ -71,7 +78,7 @@ main {
   top: 0.05rem;
 }
 .keyboard #enter, .keyboard #del {
-  width: 6.5vw;
+  width: 4rem;
 }
 .keyboard .kboard-row1, .keyboard .kboard-row2, .keyboard .kboard-row3 {
   display: flex;

@@ -1,37 +1,56 @@
 
 
 
-// document.addEventListener('DOMContentLoaded', initalFocus)
-const inputArr =  document.getElementsByClassName('ur-input')
-const abc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+// const btns = document.querySelectorAll()
+const buttons = document.getElementsByClassName('kbd-btn')
+const input1 = document.getElementById('0-0')
+let row = 0
+let col = 0
+let gameOver = false
+const events = ['onkeyup', 'click']
+abc ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
+// Focus on first cell on page load
+document.addEventListener('DOMcontentloaded', foucsCell(input1))
+function foucsCell(cell) {
+    cell.style.border = 'groove rgb(187 132 231)'
+}
 
-let f = inputArr.item(0)
-console.log(f)
-document.g
+const handleClick = (key) => {
+    addLetter(key);
+}
 
-for (let i = 0; i < inputArr.length; i++) {
-    const e = inputArr[i];
-    e.addEventListner('click', () => {alert('hi')})
+function addLetter(letter){
+    let curCell = document.getElementById(`${row}-${col}`);
+    curCell.textContent = letter;
+}
+
+function validate(e) {
+    if (abc.includes(e)) {
+        console.log(e)
+        e.innerHTML = e.id.toUpperCase();
+    } else {
+        e.innerHTML = ''
+    }
+    nextCell(e)
+}
+
+function nextCell(cur) {
+    let row = cur.id.split('-')[0];
+    let col = cur.id.split('-')[1];
+    let newCell;
+    if (row > 5) {
+        gameOver = true;
+    } else if (col > 4) {
+        row += 1;
+        newCell = document.getElementById(`${row}-${col}`);
+        foucsCell(newCell);
+        validate()
+    }
 
 }
 
-// for (let i = 0; i < inputArr.length; i++) {
-//     let ipt = array[i];
-//     console.log(ipt)
-//     ipt.addEventListener('click', validate)}
-
-
-const validate = function(ipt)  {
-    console.log(hello)
-    if ('abc'.indexOf(ipt.innerHTML) > -1) {
-        ipt.innerHTML = 'h';
-    } 
-    }
-
-// abc.forEach(e => {
-//     console.log(e)
-// });
-
-
+for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', () => handleClick(buttons[i].id))
+}
     

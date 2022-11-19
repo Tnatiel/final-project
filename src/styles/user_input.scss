@@ -1,8 +1,16 @@
 // ******************************MINIXS**************************
 @mixin ur-input-def {
-    width: 4vw;
+    width: 3rem;
     height: 8vh;
-    border: solid rgb(103,103,103);
+    border: solid #2e3e5b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+
+    &:focus-within {
+        outline: solid rgb(176, 199, 223);
+    }
     
 }
 
