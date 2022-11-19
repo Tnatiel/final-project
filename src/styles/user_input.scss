@@ -7,11 +7,8 @@
     align-items: center;
     justify-content: center;
     font-size: 3rem;
+    color: $font-color;
 
-    &:focus-within {
-        outline: solid rgb(176, 199, 223);
-    }
-    
 }
 
 @mixin rows-def {
